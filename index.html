@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="icon" href="./images/favicon 32x32.png" type="png" />
+    <link rel="apple-touch-icon" href="./images/favicon 72x72.png" type="png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+  </head>
+  <body onload="init()">
+    <main>
+      <!-- Landing Page -->
+      <div id="welcome-screen">
+        <a href="#" class="how-to-play" onclick="playHow()">
+          <span class="text">How to play</span>
+          <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+        </a>
+
+        <h2>Guess a Random Number between 1 - 100</h2>
+        <img
+          class="image"
+          src="./images/hero-image.svg"
+          alt="A girl and a boy with Game remote"
+        />
+
+        <button onclick="startGame()">Start the Game</button>
+      </div>
+
+      <!-- How to play? -->
+      <div id="instructions">
+        <section>
+          <h2 class="steps-heading">Instructions</h2>
+          <div class="steps">
+            <ol>
+              <li>Guess &amp; enter any random number between 1 - 100.</li>
+              <li>A message will prompt whether your number is low or high.</li>
+              <li>If it is low, enter a greater number than before.</li>
+              <li>If it is high, enter a smaller number than before.</li>
+              <li>Keep playing until you win/lose, then start a new game.</li>
+            </ol>
+          </div>
+          <button onclick="startGame()"><span>Let's play!</span></button>
+        </section>
+      </div>
+
+      <!-- Game Area -->
+      <div id="game-area">
+        <section id="event-section">
+          <h2>Select Difficulty Level</h2>
+          <div class="button-wrapper">
+            <button class="easy" onclick="easyMode()"></button>
+            <button class="hard" onclick="hardMode()"></button>
+          </div>
+        </section>
+        <section id="playground">
+          <h2 id="text-output">All the Best! 👍</h2>
+          <input
+            id="input-box"
+            type="number"
+            min="1"
+            max="100"
+            placeholder="Enter Your Guess"
+            onchange="compareGuess()"
+          />
+        </section>
+
+        <div id="new-game-button">
+          <button onclick="startGame()">Play Again!</button>
+        </div>
+
+        <section class="stats">
+          <div class="info">
+            <p>Attempts remaining :</p>
+            <span id="attempts"> - </span>
+          </div>
+          <div class="info">
+            <p>Previous guesses :</p>
+            <span id="guesses"> - </span>
+          </div>
+        </section>
+      </div>
+      <footer id="footer">
+        <p>Made with 💜 in</p>
+        <iconify-icon icon="logos:javascript"></iconify-icon>
+      </footer>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

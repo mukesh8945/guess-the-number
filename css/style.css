@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+  background-color: #862e9c;
+}
+
+main {
+  width: 55rem;
+  text-align: center;
+  background-color: #ffd4d4;
+  border: solid #495057;
+  border-radius: 1rem;
+  padding: 4rem;
+  box-shadow: 0 1.2em 2.4em rgba(255, 245, 245, 0.3);
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding: 5rem 2rem 0 2rem;
+  text-transform: capitalize;
+}
+
+p,
+span {
+  font-size: 1.8rem;
+}
+
+a {
+  box-shadow: 0 1.2em 1.2em rgba(156, 54, 181, 0.25);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+iconify-icon {
+  font-size: 2.4rem;
+  margin-left: 0.5rem;
+}
+
+#welcome-screen {
+  position: relative;
+}
+
+.how-to-play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #862e9c;
+  color: #ffd4d4;
+  text-decoration: none;
+  border-radius: 60px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+  width: auto;
+  max-width: 32px;
+  /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s ease;
+}
+
+.how-to-play:hover {
+  max-width: 300px;
+}
+
+.icon {
+  font-size: 22px;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  white-space: nowrap;
+  padding-left: 15px;
+}
+
+.image {
+  width: 90%;
+  height: auto;
+  max-height: 22rem;
+  margin: 2rem 0;
+}
+
+button {
+  background: #6d28d9;
+  border-radius: 0.8rem;
+  border-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 2rem 3rem;
+  margin: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  box-shadow: 0 1.2em 2.4em rgba(156, 54, 181, 0.25);
+  transition: all 0.5s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  text-transform: capitalize;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button:hover {
+  color: black;
+  box-shadow: inset 0 0 0 3px #6d28d9;
+  background: transparent;
+}
+
+/* How to play? */
+.steps-heading {
+  padding: 2rem 0;
+}
+
+.steps {
+  padding: 0 4rem;
+  margin: 2rem 0;
+}
+
+ol {
+  text-align: justify;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+li {
+  padding-left: 1.2rem;
+}
+
+/* Our Game Area */
+#game-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-area h2 {
+  padding: 3rem 2rem;
+}
+
+#event-section,
+#playground {
+  margin-bottom: 2rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-wrapper button {
+  width: 18rem;
+}
+
+.button-wrapper .easy::after {
+  content: "Easy";
+}
+
+.button-wrapper .easy:hover::after {
+  content: "10 Attempts";
+}
+
+.button-wrapper .hard::after {
+  content: "Hard";
+}
+
+.button-wrapper .hard:hover::after {
+  content: "5 Attempts";
+}
+
+#new-game-button button {
+  margin-bottom: 2rem;
+}
+
+input {
+  border: 0.1rem solid #adb5bd;
+  background: #f1f3f5;
+  margin: 4rem 0;
+  padding: 2rem 1rem;
+  width: 18rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input:focus-visible {
+  outline: none;
+  outline: 2px solid #9c36b5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.stats {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.info span {
+  color: #e03131;
+  padding-left: 2rem;
+}
